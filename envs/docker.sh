@@ -26,4 +26,5 @@ fi
 echo "🚀 Starting new container from image '$IMAGE_NAME'..."
 docker run -it --gpus all --name $CONTAINER_NAME \
          -v /home/carla/Desktop/projects/repo_myself/world_model_explor:/world_model_explor \
+         --net host \
          $IMAGE_NAME /bin/bash

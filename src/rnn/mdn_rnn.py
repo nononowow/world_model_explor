@@ -61,7 +61,6 @@ class MDNRNN(nn.Module):
             hidden: Updated LSTM hidden state
         """
         batch_size, seq_len = latent_states.shape[:2]
-        
         # Concatenate latent state and action
         inputs = torch.cat([latent_states, actions], dim=-1)  # [batch, seq, latent_dim + action_dim]
         
@@ -129,9 +128,6 @@ class MDNRNN(nn.Module):
             next_latent: Predicted next latent state [batch_size, latent_dim]
             hidden: Updated LSTM hidden state
         """
-        # Add sequence dimension
-        latent_state = latent_state.unsqueeze(1)  # [batch, 1, latent_dim]
-        action = action.unsqueeze(1)  # [batch, 1, action_dim]
         
         # Forward pass
         pi, mu, logvar, hidden = self.forward(latent_state, action, hidden)
