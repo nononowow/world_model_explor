@@ -1,4 +1,4 @@
-# Reinforcement Learning in Deep Learning: A Comprehensive Summary
+`# Reinforcement Learning in Deep Learning: A Comprehensive Summary
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -363,9 +363,10 @@ Soft update target networks
 - Learning skills at multiple time scales
 
 ### 7. Imitation Learning
-- Behavioral cloning
-- Inverse RL
-- Generative Adversarial Imitation Learning (GAIL)
+- **Behavioral Cloning**: Supervised learning on expert demonstrations
+- **DAgger (Dataset Aggregation)**: Iterative dataset aggregation to handle distribution shift
+- **Inverse RL**: Infer reward function from demonstrations
+- **Generative Adversarial Imitation Learning (GAIL)**: Adversarial training to match expert distribution
 
 ### 8. Distributional RL
 - Model full return distribution, not just mean
